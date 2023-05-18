@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.29.7",
+    "@tanstack/react-query-devtools": "^4.29.7",
     "@types/node": "20.1.5",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "eslint": "8.40.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "styled-components": "^6.0.0-rc.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^4.29.4",
+    "@types/styled-components": "^5.1.26",
+    "eslint-config-airbnb-base": "^15.0.0"
   }
 }
