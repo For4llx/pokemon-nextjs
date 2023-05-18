@@ -2,12 +2,15 @@
 
 import { Pokemon } from "@/components/Pokemon";
 import { useFetchPokemons } from "@/components/Pokemon/PokemonHook";
+import { theme } from "@/styles/Theme";
+import { ThemeProvider } from "styled-components";
 import { Roboto } from "next/font/google";
+import { GlobalStyles } from "@/styles/Global";
 
 // If loading a variable font, you don't need to specify the font weight
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: "100",
+  weight: ["400", "700"],
 });
 
 export default function Home() {
@@ -23,9 +26,12 @@ export default function Home() {
 
   if (pokemons) {
     return (
-      <main className={roboto.className}>
-        <Pokemon pokemons={pokemons} />
-      </main>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <main className={roboto.className}>
+          <Pokemon pokemons={pokemons} />
+        </main>
+      </ThemeProvider>
     );
   }
   return <div>Something excpected happenned</div>;

@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     html, body, #root {
         width: 100%;
         height: 100%;
+        background-color: #E5E5E5;
     }
     a {
         text-decoration: none;
